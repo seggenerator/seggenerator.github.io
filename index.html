@@ -3,20 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="HyperNeRF handles topological variations by modeling a family of shapes in a higher-dimensional space, thereby producing more realistic renderings and more accurate geometric reconstructions.">
-  <meta name="keywords" content="HyperNeRF, Nerfies, D-NeRF, NeRF">
+        content="SegGen">
+  <meta name="keywords" content="SegGen">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="./static/images/thumbnail.png"/>
-  <link rel="image_src" href="./static/images/thumbnail.png">
+  <meta property="og:image" content="./static/img/logo.png"/>
+  <link rel="image_src" href="./static/img/logo.png">
   <link rel="icon"
         type="image/x-icon"
-        href="./static/images/favicon.ico"/>
+        href="./static/img/logo.png"/>
 
-  <title>HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance
-    Fields</title>
+  <title>
+    SegGen: Supercharging Segmentation Models with Text2Mask and Mask2Img Synthesis
+  </title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -27,8 +26,6 @@
 
   </script>
 
-  <script type="module"
-          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -51,6 +48,7 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  
 </head>
 <body>
 
@@ -64,13 +62,13 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <!-- <a class="navbar-item" href="https://sites.google.com/site/yhrspace/">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
-      </a>
+      </a> -->
 
-      <div class="navbar-item has-dropdown is-hoverable">
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
@@ -88,7 +86,7 @@
             PhotoShape
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
 
   </div>
@@ -99,79 +97,45 @@
   <div class="hero-body">
     <div class="container">
       <div class="columns is-centered">
-        <div class="column is-4 has-text-centered">
-          <img src="static/images/logo.svg" alt="HyperNeRF"/>
+        <div class="column is-2 has-text-centered">
+          <img src="static/img/logo.svg" height="100%" alt="logo"/>
         </div>
       </div>
       <div class="container has-text-centered">
         <h1 class="title is-1 publication-title">
-          A Higher-Dimensional Representation<br/>for Topologically Varying Neural Radiance Fields
+          <span style="color: #711c3d"> SegGen: Supercharging Segmentation Models <br>with Text2Mask and Mask2Img Synthesis </span>
         </h1>
         <div class="is-size-5 publication-authors">
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/keunhong_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/keunhong_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://keunhong.com">Keunhong Park</a><sup>1,2</sup></div>
-          <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/utsinh_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/utsinh_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup></div>
-          <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/hedman_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/hedman_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://phogzone.com/">Peter Hedman</a><sup>2</sup></div>
-          <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/barron_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/barron_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>
+            <a href="https://sites.google.com/site/yhrspace/">Hanrong Ye</a><sup>1</sup>,
           </div>
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/sofien_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/sofien_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>
+            <a href="https://research.adobe.com/person/jason-kuen/">Jason Kuen</a><sup>2</sup>,
           </div>
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/dgo_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/dgo_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>
+            <a href="https://qliu24.github.io/">Qing Liu</a><sup>2</sup>,
           </div>
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/rmbrualla_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/rmbrualla_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            <a href="https://research.adobe.com/person/zhe-lin/">Zhe Lin</a><sup>2</sup>,
           </div>
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/smseitz_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/smseitz_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>
+            <a href="https://research.adobe.com/person/brian-price/">Brian Price</a><sup>2</sup>,
           </div>
-        </div>
-
+          <div class="author-block">
+            <a href="https://www.danxurgb.net/">Dan Xu</a><sup>1</sup>
+          </div>
         <div class="is-size-5 publication-authors">
-          <span class="author-block"><sup>1</sup>University of Washington,</span>
-          <span class="author-block"><sup>2</sup>Google Research</span>
+          <span class="author-block"><sup>1</sup>HKUST</span>
+          <span class="author-block"><sup>2</sup>Adobe Research</span>
         </div>
+        <!-- <div class="is-size-6 publication-authors">
+          <span class="author-block"><sup>*</sup>Most work done during internship at Adobe Research</span>
+        </div> -->
 
         <div class="column has-text-centered">
           <div class="publication-links">
             <!-- PDF Link. -->
-            <span class="link-block">
+            <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2106.13228.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -179,7 +143,7 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
             <span class="link-block">
                 <a href="https://arxiv.org/abs/2106.13228"
                    class="external-link button is-normal is-rounded is-dark">
@@ -189,7 +153,7 @@
                   <span>arXiv</span>
                 </a>
             </span>
-            <span class="link-block">
+            <!-- <span class="link-block">
               <a href="https://github.com/google/hypernerf"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
@@ -197,9 +161,9 @@
                 </span>
                 <span>Code</span>
                 </a>
-            </span>
+            </span> -->
             <!-- Dataset Link. -->
-            <span class="link-block">
+            <!-- <span class="link-block">
               <a href="https://github.com/google/hypernerf/releases/tag/v0.1"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
@@ -207,7 +171,7 @@
                 </span>
                 <span>Data</span>
                 </a>
-              </span>
+              </span> -->
           </div>
         </div>
       </div>
@@ -218,104 +182,16 @@
 <section class="hero teaser">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <video id="teaser" autoplay controls muted loop playsinline height="100%">
+      <!-- <video id="teaser" autoplay controls muted loop playsinline height="100%">
         <source src="./static/images/teaser.mp4"
                 type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <i>HyperNeRF</i> handles topological variations by modeling a
-        family of shapes in a higher-dimensional space, thereby producing more realistic renderings
-        and more accurate geometric reconstructions.
+      </video> -->
+      <img src="static/img/teaser_coco_website.jpg" height="100%" ></img>
+      <h2 class="subtitle has-text">
+        <font color="#9e2e23"><b><i>SegGen</i></b></font> not only significatly improve the performance of state-of-the-art segmentation models on standard benchmarks (COCO and ADE20K), 
+        but also boost the generalization ability towards challenging images from unseen domain. 
+        The three columns on the left are from PASCAL dataset and the three on the right are synthesized by generative model Kandinsky 2.
       </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-dark is-small">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <div id="results-carousel" class="carousel results-carousel">
-
-        <div>
-          <div class="results-item">
-            <video poster="" id="espresso-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/espresso_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="espresso-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/espresso_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <div>
-          <div class="results-item">
-            <video poster="" id="split-cookie-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/split-cookie_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="split-cookie-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/split-cookie_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <div>
-          <div class="results-item">
-            <video poster="" id="3dprinter-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/3dprinter_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="3dprinter-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/3dprinter_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <div>
-          <div class="results-item">
-            <video poster="" id="ricardo-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/ricardo_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="ricardo-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/ricardo_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <div>
-          <div class="results-item">
-            <video poster="" id="americano-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/americano_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="americano-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/americano_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-three-quarters">
-          <p>
-            Here we show results generated with <i>HyperNeRF</i>. These videos show the input video
-            being
-            played
-            back with a stabilized novel camera path. The right side video shows the depth of the
-            scene.
-            Click on the arrows or drag to see more results.
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -326,30 +202,19 @@
 
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="font-size: 20px;">
           <p>
-            Neural Radiance Fields (NeRF) are able to reconstruct scenes with unprecedented
-            fidelity,
-            and various recent works have extended NeRF to handle dynamic scenes. A common approach
-            to reconstruct such non-rigid scenes is through the use of a learned deformation field
-            mapping from coordinates in each input image into a canonical template coordinate space.
-            However, these deformation-based approaches struggle to model changes in topology, as
-            topological changes require a discontinuity in the deformation field, but these
-            deformation fields are necessarily continuous.
+          We propose SegGen, a highly-effective training data generation method for image segmentation, which pushes the performance limits of state-of-the-art segmentation models to a significant extent. 
+          SegGen designs and integrates two data generation strategies: MaskSyn and ImgSyn. 
+          (i) MaskSyn synthesizes new mask-image pairs via our proposed text-to-mask generation model and mask-to-image generation model, greatly improving the diversity in segmentation masks for model supervision; 
+          (ii) ImgSyn synthesizes new images based on existing masks using the mask-to-image generation model, strongly improving image diversity for model inputs. 
           </p>
           <p>
-            We address this limitation by lifting
-            NeRFs into a higher dimensional space, and by representing the 5D radiance field
-            corresponding to each individual input image as a slice through this "hyper-space". Our
-            method is inspired by level set methods, which model the evolution of surfaces as slices
-            through a higher dimensional surface. We evaluate our method on two tasks: (i)
-            interpolating smoothly between "moments", i.e., configurations of the scene, seen in the
-            input images while maintaining visual plausibility, and (ii) novel-view synthesis at
-            fixed moments. We show that our method, which we dub HyperNeRF, outperforms existing
-            methods on both tasks. Compared to Nerfies, <i>HyperNeRF</i> reduces average error rates by
-            4.1% for interpolation and 8.6% for novel-view synthesis, as measured by LPIPS.
+          On the highly competitive ADE20K and COCO benchmarks, our data generation method markedly improves the performance of state-of-the-art segmentation models in semantic segmentation, panoptic segmentation, and instance segmentation. 
+          Notably, in terms of the ADE20K mIoU, Mask2Former R50 is largely boosted from 47.2 to 49.9 (+2.7); Mask2Former Swin-L is also significantly increased from 56.1 to 57.4 (+1.3). These promising results strongly suggest the effectiveness of our SegGen even when abundant human-annotated training data is utilized. 
+          Moreover, training with our synthetic data makes the segmentation models more robust towards unseen domains. The project will be open-source upon paper acceptance to promote further study.
           </p>
         </div>
       </div>
@@ -357,7 +222,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-2">Video</h2>
         <div class="publication-video">
@@ -367,160 +232,189 @@
                   allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
 
-<hr/>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Motivation</h2>
-    <div class="columns is-centered">
-      <!-- Level Sets. -->
-      <div class="column is-half">
-        <div class="content">
-          <h3 class="title is-4">Level-Set Methods</h3>
-          <div class="level-set has-text-justified">
-            <p>
-              HyperNeRF represents changes in scene topology by providing a
-              NeRF with a higher-dimensional input. This is inspired by level-set methods.
-              Level-set methods provide a means to model a family of topologically-varying shapes as
-              slices of a higher dimensional auxiliary function. For example, these shapes
-            </p>
-            <div class="level-set-shapes">
-              <img src="./static/figures/level_set/0.svg"/>
-              <img src="./static/figures/level_set/1.svg"/>
-              <img src="./static/figures/level_set/2.svg"/>
-            </div>
-            <p>
-              can be represented as slices through this auxiliary shape
-            </p>
-            <model-viewer class="level-set-slices"
-                          src="./static/figures/level_set/level_set_3d.glb"
-                          alt="Slices through a 3D ambient surface."
-                          environment-image="neutral" auto-rotate camera-controls></model-viewer>
-            <p>
-              We can naturally model topologically varying shapes by just moving the
-              slicing plane along the higher dimensions. For example, this animation was generated
-              by
-              moving the slicing plane from top to bottom:
-            </p>
-            <div class="has-text-centered">
-              <video class="level-set-interpolate" controls autoplay loop playsinline muted height="100%">
-                <source src="./static/figures/level_set/interpolate2.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/ Level Sets. -->
-
-      <div class="column is-half">
-        <div class="content has-text-justified">
-          <h3 class="is-4">Slicing Surfaces</h3>
-          <p>
-            Consider the follow shapes, which have different permutations of O xand X.
-          </p>
-          <div class="level-set-ox-shapes">
-            <img src="./static/figures/level_set/ox/0.svg"/>
-            <img src="./static/figures/level_set/ox/1.svg"/>
-            <img src="./static/figures/level_set/ox/2.svg"/>
-            <img src="./static/figures/level_set/ox/3.svg"/>
-          </div>
-          <p>
-            Traditionally, level-set methods use straight planes to slice the higher-dimensional
-            surface:
-          </p>
-          <model-viewer class="level-set-slices"
-                        src="./static/figures/level_set/ox/ox_ap.glb"
-                        alt="Slices through a 3D ambient surface."
-                        environment-image="neutral" auto-rotate camera-controls></model-viewer>
-          <p>
-            This means the higher-dimensional shape must contain copies of the same shape since
-            each permutation has to lie along a single straight slice through the z-axis. If we let
-            the slicing plane bend, it results in a much cleaner template:
-          </p>
-          <model-viewer class="level-set-slices"
-                        src="./static/figures/level_set/ox/ox_ds.glb"
-                        alt="Slices through a 3D ambient surface."
-                        environment-image="neutral" auto-rotate camera-controls></model-viewer>
-          <p>Please see the paper for details.</p>
-        </div>
-      </div>
-
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3 centered">Workflow</h2>
     </div>
-  </div>
-
-
-  <div class="container is-max-desktop">
-    <div class="content has-text-justified">
-      <h2 class="title is-3">HyperNeRF</h2>
-      <p>
-        The HyperNeRF architecture is a straightforward extension to Nerfies. The key difference is
-        that the template NeRF is conditioned on additional higher-dimensional coordinates, where
-        the higher dimensional coordinates are given by an "ambient slicing surface" which can be
-        thought of as a higher dimensional analog to the deformation field.
-      </p>
-      <div class="has-text-centered">
-        <img style="width: 90%;" src="./static/figures/architecture.svg"
-             alt="HyperNeRF architecture."/>
-      </div>
-      <h3 class="title is-4">Hyper-Space Template</h3>
-      <p>
-        HyperNeRF leverages main idea of level set methods by using a template NeRF which lives in
-        higher dimensions. In addition to the spatial coordinates (X, Y, Z), the NeRF MLP takes
-        additional higher dimensional coordinates W<sub>1</sub> and W<sub>2</sub>. We call these
-        the "ambient dimensions".
-      </p>
-      <p>
-        Here is an interactive viewer for the hyper-space of capture shown in the teaser. Drag the
-        <span style="color: #29e">blue cursor</span> around to change the ambient dimension rendered
-        on the right.
-      </p>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <div class="hyper-space-wrapper has-text-centered">
-          <div class="hyper-space-axis">
-            <div class="hyper-space">
-              <div class="hyper-space-cursor"></div>
-            </div>
-          </div>
-          Ambient Dimension Coordinates
-          <br/>
-          <small>(Background shows log density of coordinate)</small>
-        </div>
-      </div>
-      <div class="column is-half has-text-centered">
-        <div class="hyper-grid-wrapper">
-          <div class="hyper-grid-rgb">
-            <img src="./static/figures/hyper_grid.jpg"/>
-          </div>
-        </div>
-        The hyper-space template rendered from a fixed viewpoint.
+    <div class="container is-max-desktop">
+      <img src="static/img/framework_website.svg" height="100%" ></img>
+      <h2 class="subtitle has-text">
+      <b>Workflow of SegGen </b>: We introduce two generative models: a text-to-mask (Text2Mask) generation model and a  mask-to-image( Mask2Img) generation model, based on which we design two approaches for generating new segmentation training samples: MaskSyn and ImgSyn.
+      <b>(a)</b> MaskSyn focuses on generating new segmentation masks. It first extracts the caption of the real image as a text prompt and uses it to generate new masks with the Text2Mask model. Then, the new masks and text prompt are fed into the Mask2Img model to produce the corresponding new images.
+      <b>(b)</b> ImgSyn focuses on the synthesis of new images. It directly inputs human-labeled masks and text prompts into the Mask2Img model to generate new images.
+      </h2>
       </div>
     </div>
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- <video id="teaser" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/images/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <img src="static/img/masksyn_0.gif" height="100%" ></img>
+      <h2 class="subtitle has-text-centered">
+        <b><i>MaskSyn</i></b> synthesize new mask-image pairs. It first generate synthetic segmentation masks with a Text2Mask model, and then synthesize new images with a Mask2Image model.
+      </h2>
+      <img src="static/img/imgsyn_0.gif" height="100%" ></img>
+      <h2 class="subtitle has-text-centered">
+        <b><i>ImgSyn</i></b> synthesize new images. It generates new images conditioned on human-annotated segmentation masks with a Mask2Image model.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-dark is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div>
+          <div class="results-item">
+            <image src="static/img/masksyn/ADE_train_00000421_mask.png" ></image>
+            <image src="static/img/masksyn/ADE_train_00000421_img.png" ></image>
+            <figcaption>Text prompts: "a bed, and a window"</figcaption>
+          </div>
+        </div>
+
+        <div>
+          <div class="results-item">
+            <image src="static/img/masksyn/ADE_train_00005483_masksyn_mask_0.png"></image>
+            <image src="static/img/masksyn/ADE_train_00005483_masksyn_img_0.png"></image>
+            <figcaption>Text prompts: "twin beds"</figcaption>
+          </div>
+        </div>
+
+        <div>
+          <div class="results-item">
+            <image src="static/img/masksyn/ADE_train_00002308_img.png" ></image>
+            <image src="static/img/masksyn/ADE_train_00002308_mask.png"  ></image>
+            <figcaption>Text prompts: "a carpeted room with a desk and chairs"</figcaption>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-three-quarters is-size-5">
+          <p>
+            Generated mask-image pairs by <b>MaskSyn</b>. Both masks and images are synthesized by our SegGen.
+            The synthetic masks are highly diverse.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-dark is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel" style="justify-content:center; align-items: center">
+
+        <div>
+          <div class="results-item">
+            <!-- <video poster="" id="espresso-rgb" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/espresso_rgb.mp4"
+                      type="video/mp4">
+            </video>
+            <video poster="" id="espresso-depth" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/espresso_depth.mp4"
+                      type="video/mp4">
+            </video> -->
+            <!-- <image src="static/img/imgsyn_0.gif" height="135px" style="background-color:#9e2e23;"></image> -->
+            <image src="static/img/imgsyn/ADE_train_00000003_img.png" ></image>
+            <image src="static/img/imgsyn/ADE_train_00000003_mask.png" ></image>
+            <figcaption>Text prompts: "a room with artwork on the walls"</figcaption>
+          </div>
+        </div>
+
+        <div>
+          <div class="results-item">
+            <image src="static/img/imgsyn/ADE_train_00001745_img.png"  ></image>
+            <image src="static/img/imgsyn/ADE_train_00001745_mask.png" ></image>
+            <figcaption>Text prompts: "a woman painting a dog"</figcaption>
+          </div>
+        </div>
+
+        <div>
+          <div class="results-item">
+            <image src="static/img/imgsyn/ADE_train_00005061_img.png" ></image>
+            <image src="static/img/imgsyn/ADE_train_00005061_mask.png" ></image>
+            <figcaption>Text prompts: "a giant inflatable gorilla"</figcaption>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-three-quarters is-size-5">
+          <p>
+            Generated images by <b>ImgSyn</b>. The masks are human-annotated. 
+            The synthetic images are realistic and align well with the masks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <hr/>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3 centered">Better Alignment</h2>
+      </div>
+      <img src="static/img/better_align.jpg" height="100%" ></img>
+      <h2 class="subtitle has-text">
+        Our synthetic images align better with the human-labeled msks than real images in many cases due to the inaccuracies in human annotations.
+        The left 4 samples are from ADE20K and the right 4 are from COCO.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3 centered">Experiments</h2>
+      </div>
+        <img src="./static/img/exps/table_ade.png"/>
+        <img src="./static/img/exps/table_coco_pan.png"/>
+        <img src="./static/img/exps/table_ablation.png"/>
+      <h2 class="subtitle has-text">
+      </h2>
+    </div>
+  </div>
+</section>
+
+
 
 <section class="section" id="BibTeX">
   <div class="container content is-max-desktop">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021hypernerf,
-  author = {Park, Keunhong and Sinha, Utkarsh and Hedman, Peter and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Martin-Brualla, Ricardo and Seitz, Steven M.},
-  title = {HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields},
-  journal = {ACM Trans. Graph.},
-  issue_date = {December 2021},
-  publisher = {ACM},
-  volume = {40},
-  number = {6},
-  month = {dec},
-  year = {2021},
-  articleno = {238},
+    <pre><code>@article{ye2023seggen,
+  title={SegGen: Supercharging Segmentation Models with Text2Mask and Mask2Img Synthesis},
+  author={Ye, Hanrong and Kuen, Jason and Liu, Qing and Lin, Zhe and Price, Brian and Xu, Dan},
+  year={2023}
 }</code></pre>
   </div>
 </section>
@@ -528,27 +422,12 @@
 
 <section class="section" id="acknowledgements">
   <div class="container content is-max-desktop">
-    <h2 class="title">Acknowledgements</h2>
-    <p>Special thanks to <a href="https://homes.cs.washington.edu/~holynski/">Aleksander Hołyński</a>,
-      <a href="https://roxanneluo.github.io/">Xuan Luo</a>, and Haley Cho for their support and
-      help with collecting data. Thanks to <a href="https://zhengqili.github.io/">Zhengqi Li</a> and
-      <a href="http://www.oliverwang.info/">Oliver Wang</a> for their help with the NSFF experiments.</p>
+  The website template was adapted from
+    <a href="https://hypernerf.github.io/">HyperNerf</a>.
   </div>
 </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link" href="https://arxiv.org/pdf/2106.13228.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-</footer>
 
 <script type="text/javascript" src="./static/slick/slick.min.js"></script>
 </body>

@@ -147,6 +147,16 @@ body {
   overflow: hidden;
   padding: 0;
   font-size: 0;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+}
+
+.results-item figcaption {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0;
+    color: #f7a7a7; /* Adjust color as needed */
 }
 
 .results-carousel video {

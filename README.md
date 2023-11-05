@@ -1,1 +1,1 @@
-# HyperNeRF Website
+# SegGen Website
